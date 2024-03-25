@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">textcounter</string>
+    <string name="count_button_text">COUNT</string>
+    <string name="toast_info">Enter text!</string>
+    <string name="result_format">Number of %s: %d</string>
+    <string-array name="count_options">
+        <item>words</item>
+        <item>characters</item>
+    </string-array>
+</resources>
