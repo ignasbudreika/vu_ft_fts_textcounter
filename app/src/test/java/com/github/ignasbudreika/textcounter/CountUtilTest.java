@@ -61,7 +61,7 @@ public class CountUtilTest {
     }
 
     @Test
-    public void shouldCountCharacters_whenProperTextProvided() {
+    public void shouldReturnCharactersCount_whenProperTextProvided() {
         String text = "some actually proper text";
 
         int result = CountUtil.count(text, false);
@@ -70,7 +70,7 @@ public class CountUtilTest {
     }
 
     @Test
-    public void shouldCountCharacters_whenComplexTextProvided() {
+    public void shouldReturnCharactersCount_whenComplexTextProvided() {
         String text = "let's pretend it is a complex text! words: 9";
 
         int result = CountUtil.count(text, false);
@@ -106,7 +106,7 @@ public class CountUtilTest {
     }
 
     @Test
-    public void shouldReturnCharactersCount_whenNullTextProvided() {
+    public void shouldReturnZeroCharacters_whenNullTextProvided() {
         String text = null;
 
         int result = CountUtil.count(text, false);
