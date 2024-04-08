@@ -26,7 +26,10 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public void onClick(View v) {
-                if (editText.getText().length() == 0) {
+                boolean words = spinner.getSelectedItem().toString().equals("words");
+
+                int count = CountUtil.count(editText.getText().toString(), words);
+                if (count == 0) {
                     Toast info = Toast.makeText(v.getContext(),
                             getResources().getText(R.string.toast_info),
                             Toast.LENGTH_SHORT);
@@ -35,9 +38,6 @@ public class MainActivity extends AppCompatActivity {
                     return;
                 }
 
-                boolean words = spinner.getSelectedItem().toString().equals("words");
-
-                int count = CountUtil.count(editText.getText().toString(), words);
                 resultTextView.setText(String.format(getResources().getString(R.string.result_format),
                         spinner.getSelectedItem().toString(),
                         count));
